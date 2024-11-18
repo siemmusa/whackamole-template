@@ -17,6 +17,7 @@ def main():
             screen.fill("light green")
             pygame.display.flip()
             clock.tick(60)
+            pygame.draw.line(screen, black, (0,0), (20,16))
     finally:
         pygame.quit()
 
