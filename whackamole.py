@@ -18,6 +18,7 @@ def main():
             pygame.display.flip()
             clock.tick(60)
             pygame.draw.line(screen, black, (0,0), (20,16))
+            screen.blit(mole_image, mole_image.get_rect(topleft=(x,y)))
     finally:
         pygame.quit()
 
