@@ -14,9 +14,9 @@ def main():
         mole_width, mole_height = mole_image.get_size()
         mole_x, mole_y = 0, 0
         for x in range(0, screen_width, grid_cell_size):
-                pygame.draw.line(screen, grid_color, (x, 0), (x, screen_height))
+                pygame.draw.line(screen, (200, 200, 200), (x, 0), (x, 512))
             for y in range(0, screen_height, grid_cell_size):
-                pygame.draw.line(screen, grid_color, (0, y), (screen_width, y))
+                pygame.draw.line(screen, (200, 200, 200), (0, y), (640, y))
         while running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -26,7 +26,7 @@ def main():
                     if (mole_x <= mouse_x < mole_x + 32 and mole_y <= mouse_y < mole_y + 32):
                         mole_x = random.randrange(0, 20) * 32
                         mole_y = random.randrange(0, 16) * 32
-            screen.fill("light green")
+            screen.fill((213, 247, 242))
             pygame.display.flip()
             clock.tick(60)
     finally:
